@@ -17,7 +17,6 @@ export class AppComponent {
       content: serverData.serverContent,
     });
   }
-
   onBlueprintAdded(blueprintData: {
     serverName: string;
     serverContent: string;

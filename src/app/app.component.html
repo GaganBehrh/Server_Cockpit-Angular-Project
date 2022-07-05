@@ -1,4 +1,5 @@
 <div class="container">
+  <!--Here is when we emit out the event when a change in a component is made -->
   <app-cockpit
     (srvCreated)="onServerAdded($event)"
     (bpCreated)="onBlueprintAdded($event)"
@@ -6,6 +7,7 @@
   <hr />
   <div class="row">
     <div class="col-xs-12">
+      <!--Here is when a parent component wants to access an element in a component from outside-->
       <app-server-element
         *ngFor="let serverElement of serverElements"
         [srvElement]="serverElement"
