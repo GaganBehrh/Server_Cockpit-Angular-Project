@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-game-control',
-  templateUrl: './game-control.component.html',
-  styleUrls: ['./game-control.component.css']
+  selector: "app-game-control",
+  templateUrl: "./game-control.component.html",
+  styleUrls: ["./game-control.component.css"],
 })
 export class GameControlComponent implements OnInit {
+  count = 0;
+  currentCount;
+  eachse
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  incrementNumber() {
+    this.currentCount = this.count++;
+    setInterval(this.currentCount, 1);
   }
-
 }
