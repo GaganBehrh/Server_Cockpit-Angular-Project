@@ -9,7 +9,8 @@ export class AppComponent {
   serverElements = [
     { type: "server", name: "Testserver", content: "Just a test" },
   ];
-
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
   onServerAdded(serverData: { serverName: string; serverContent: string }) {
     this.serverElements.push({
       type: "server",
@@ -27,8 +28,9 @@ export class AppComponent {
       content: blueprintData.serverContent,
     });
   }
-  incrementedNumber(firedNumber: Number) {
-    console.log(firedNumber);
-  }
 
+  incrementedNumber(firedNumber: number) {
+    if (firedNumber % 2 === 0) this.evenNumbers.push(firedNumber);
+    else this.oddNumbers.push(firedNumber);
+  }
 }

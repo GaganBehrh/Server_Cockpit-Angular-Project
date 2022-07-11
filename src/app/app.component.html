@@ -25,7 +25,18 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <app-game-control (intervalStarted)="incrementedNumber($event)"> </app-game-control>
+      <app-game-control (intervalStarted)="incrementedNumber($event)">
+      </app-game-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd *ngFor="let odd of oddNumbers" [inputNumber]="odd"> </app-odd>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-even *ngFor="let even of evenNumbers" [inputNumber]="even"> </app-even>
     </div>
   </div>
 </div>
