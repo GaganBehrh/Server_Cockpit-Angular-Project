@@ -27,4 +27,8 @@ export class AppComponent {
       content: blueprintData.serverContent,
     });
   }
+  incrementedNumber(firedNumber: Number) {
+    console.log(firedNumber);
+  }
+
 }
